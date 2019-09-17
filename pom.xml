@@ -53,6 +53,7 @@
         <velocity.version>1.7</velocity.version>
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
         <guava.version>18.0</guava.version>
+        <hutool.version>4.6.6</hutool.version>
     </properties>
 
     <dependencies>
@@ -224,6 +225,13 @@
             <artifactId>shiro-spring</artifactId>
             <version>${shiro-spring.version}</version>
         </dependency>
+        <!--  huTool    ${hutool.version}  -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
