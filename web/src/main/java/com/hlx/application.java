@@ -1,9 +1,8 @@
 package com.hlx;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @BelongsProject: forxl
@@ -13,13 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description:
  */
 @SpringBootApplication
-@RestController
+@MapperScan("com.hlx.mapper")
 public class application {
-
-    @RequestMapping("/")
-    public String HelloSpring(){
-        return "Hello Spring";
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(application.class, args);

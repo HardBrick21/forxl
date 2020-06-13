@@ -1,8 +1,13 @@
 package com.hlx.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import cn.hutool.json.JSONUtil;
+import com.hlx.po.User;
+import com.hlx.service.IUserService;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @BelongsProject: forxl
@@ -14,8 +19,23 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @RequestMapping("/hello")
-    public String Helllo(){
+    private final IUserService userService;
+
+    public TestController(IUserService userService) {
+        this.userService = userService;
+    }
+
+
+    @GetMapping("/hello")
+    public String Helllo() {
         return "Hello World";
     }
+
+    @GetMapping("/getAll")
+    public String getAllUser() {
+
+        List<User> list = userService.list();
+        return JSONUtil.toJsonStr(list);
+    }
+
 }
