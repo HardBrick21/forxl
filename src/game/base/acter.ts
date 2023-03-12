@@ -9,7 +9,7 @@ export class Acter implements Role {
   def: number;
   equips: Equipment[];
 
-  constructor(name: string){
+  constructor(name: string) {
     this.name = name;
     this.hp = 100;
     this.mp = 10;
