@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         XXL-Job Select Search (Native Select)
+// @name         XXL-Job_Select_Search
 // @namespace    https://github.com/HardBrick21/forxl
 // @version      1.0
 // @description  为XXL-Job的原生Select下拉框添加搜索功能（基于Choices.js）
@@ -48,3 +48,4 @@
     }
 
 })();
+
